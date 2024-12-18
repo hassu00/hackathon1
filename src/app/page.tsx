@@ -1,9 +1,9 @@
 // import Link from 'next/link';
 "use client"
 import Header from "./component header/header";
+import { useRouter } from "next/navigation";
 import Footer from "./component footer/footer";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 export default function Homepage() {
   const router = useRouter();
   return (
@@ -22,8 +22,8 @@ export default function Homepage() {
         </div>
       </div>
       <div className="grid grid-rows-4 w-[1440px] h-[476px] ">
-        <div className="   flex flex-col justify-center ">
-          <p className="text-center font-normal text=[24px] leading-[33.6px] text-[#2A254B]">
+        <div className="flex flex-col justify-center ">
+          <p className="text-center font-normal text-[24px] leading-[33.6px] text-[#2A254B]">
             What makes our brand different
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function Homepage() {
         </div>
       </div>
       <div className="grid grid-rows-4  h-[636px] w-[1440px] ">
-        <div className="grid row-span-3 grid-cols-4 items-center pl-[40px]">
+        <div className="grid row-span-3 lg:grid-cols-4 items-center pl-[40px]">
           <div className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]">
             <Image
               src="/images/Parent.svg"
@@ -164,7 +164,7 @@ export default function Homepage() {
 
         <div className="flex justify-center items-center">
           <button
-            onClick={() => router.push("./product/product.tsx")}
+            onClick={() => router.push("/product")}
             className="cursor-pointer hover:scale-[1.05] text-[#2A254B]  gap-[10px]  bg-white h-[56px] w-[#F9F9F9] pb-[16px] pr-[32px] pl-[32px] font-normal text-[16px] leading-[24px]"
           >
             View collection
@@ -186,7 +186,7 @@ export default function Homepage() {
                 </p>
               </div>
               <button 
-                  onClick={() => router.push('./product/product.tsx')}
+                  onClick={() => router.push('./product')}
               className="cursor-pointer hover:scale-[1.05] mt-[180px] mb-[30px] mr-[310px] text-[white]  gap-[10px]  bg-[#F9F9F926] h-[56px] w-[#F9F9F9] pt-[16px] pb-[16px] pr-[32px] pl-[32px] font-normal text-[16px] leading-[24px] text-center">
                 View collection
               </button>

@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
       <div className="h-[380px] w-[1440px]">
-        <div className="bg-[#2A254B] grid lg:grid-rows-4 lg:grid-cols-5 h-[380px] w-[1440px]">
+        <div className="bg-[#2A254B] grid lg:grid-rows-4 lg:grid-cols-5 h-[380px] w-full max-w-[1440px]">
           <div className="row-span-3 col-span-5  flex justify-around items-start">
             <div className=" flex-col justify-center items-center space-y-3 w-[130px] h-[174px] mt-[58px]">
               <div className="font-normal text-[16px] leading-[19.6px] text-white">Menu</div>

@@ -1,23 +1,33 @@
+"use client"
+import {useState} from 'react'
 import Image from "next/image";
-export default function header() {
+import Link from "next/link";
+export default function Header() {
+  const [OpenMenu, setOpenMenu] = useState(false)
   return (
-    <div className=' gap-4 items-center'>
-        <div className="w-[1440px]  h-[132px] grid grid-rows-2">
+    <div>
+
+    <div className=' gap-4 items-center lg:block  hidden'>
+        <div className='lg:block  hidden'>
+
+        <div className="w-[1440px] md:w-full h-[132px] grid grid-rows-2 ">
             <div className="flex justify-between items-center">
             <Image
             width={16}
             height={16}
             alt="search icon"
             src="/images/Search.svg"
-          />
+            />
           <p className="font-normal text-[24px] leading-[29.52px]">Avion</p>
           <div className="flex">
+          <Link href="/cart">  
           <Image
             width={16}
             height={16}
             alt="Shopping cart icon"
             src="/images/Shopping--cart.svg"
-          />
+            />
+          </Link>
           <Image
             width={16}
             height={16}
@@ -37,9 +47,46 @@ export default function header() {
         <div className="hover:underline cursor-pointer font-normal text-[16] leading-[21.16px] text-[#726E8D]">Tableware</div>
         <div className="hover:underline cursor-pointer font-normal text-[16] leading-[21.16px] text-[#726E8D]">Cutlery</div>
           </div>
-
-        
     </div>
+    </div>
+            </div>
+    <header className='h-[69px] w-full mx-auto  grid grid-rows-1  '>
+      <div className='block lg:hidden'>
+        <div className='flex justify-between items-center m-5 ' >
+          <div className='font-normal text-[24px] leading-[29.52px]'>Avion</div>
+          <div className='flex gap-5 '>
+          <Image
+            width={16}
+            height={16}
+            alt="search icon"
+            src="/images/Search.svg"
+            />
+           <Image
+            width={16}
+            height={16}
+            alt="search icon"
+            src="/images/Menu.svg"
+            onClick={() => setOpenMenu(!OpenMenu)}
+            className='cursor-pointer'
+            
+          />
+          {OpenMenu &&(
+            <div className='absolute  top-12 z-10 items-center w-[100px] py-3  mr-[50px] bg-white'>
+              <ul className='flex flex-col gap-5'>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Plant pots</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Ceramics</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Tables</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Chairs</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Crockery</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Tableware</li>
+                <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Cutlery</li>
+              </ul>
+            </div>
+          )}
+          </div>
+        </div>
+          </div>
+      </header>
     </div>
   )
 }
