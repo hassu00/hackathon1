@@ -1,15 +1,15 @@
 // import Link from 'next/link';
-"use client"
-import Header from "./component header/header";
+"use client";
 import { useRouter } from "next/navigation";
 import Footer from "./component footer/footer";
+import Header from "./component header/header";
 import Image from "next/image";
 export default function Homepage() {
   const router = useRouter();
   return (
     <div>
       <Header />
-      <div className="relative grid grid-rows-1 h-[704px] w-[1440px]">
+      <div className="relative grid grid-rows-1 h-[704px]  max-w-screen-2xl">
         <div>
           <Image
             src="/images/Hero Blocks.svg"
@@ -21,13 +21,14 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <div className="grid grid-rows-4 w-[1440px] h-[476px] ">
+
+      <div className="grid grid-rows-4 max-w-screen-2xl h-[476px] ">
         <div className="flex flex-col justify-center ">
           <p className="text-center font-normal text-[24px] leading-[33.6px] text-[#2A254B]">
             What makes our brand different
           </p>
         </div>
-        <div className="row-span-3 w-[1440px]">
+        <div className="row-span-3 max-w-screen-2xl">
           <div className="grid lg:grid-cols-4 items-center h-full pl-[90px] gap-[24px]">
             <div className="gap-[10px]  h-[305px] w-[244px] p-[48px]  bg-[#F9F9F9] items-center flex flex-col justify-center">
               <div className="w-[206px] h-[148px] gap-[12px] flex-col flex justify-center ">
@@ -98,9 +99,12 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <div className="grid grid-rows-4  h-[636px] w-[1440px] ">
+      <div className="grid grid-rows-4  h-[636px] max-w-screen-2xl ">
         <div className="grid row-span-3 lg:grid-cols-4 items-center pl-[40px]">
-          <div className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]">
+          <div
+            className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]"
+            onClick={() => router.push("/productListing")}
+          >
             <Image
               src="/images/Parent.svg"
               alt="Hero Image"
@@ -115,7 +119,10 @@ export default function Homepage() {
               £250
             </p>
           </div>
-          <div className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]">
+          <div
+            className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]"
+            onClick={() => router.push("/productListing")}
+          >
             <Image
               src="/images/Parent (1).svg"
               alt="Hero Image"
@@ -130,7 +137,10 @@ export default function Homepage() {
               £155
             </p>
           </div>
-          <div className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]">
+          <div
+            className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]"
+            onClick={() => router.push("/productListing")}
+          >
             <Image
               src="/images/Parent (2).svg"
               alt="Hero Image"
@@ -145,7 +155,10 @@ export default function Homepage() {
               £125
             </p>
           </div>
-          <div className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]">
+          <div
+            className="w-[305px] h-[462px] gap-[24px] bg-white cursor-pointer hover:scale-[1.05]"
+            onClick={() => router.push("/productListing")}
+          >
             <Image
               src="/images/Parent (3).svg"
               alt="Hero Image"
@@ -171,36 +184,41 @@ export default function Homepage() {
           </button>
         </div>
       </div>
-      <div className="grid grid-rows-1 w-[1440px] h-[598px] pt-[60px] pb-[60px] pl-[80px] pr-[80px] gap-[29px] ">
+      <div className="grid grid-rows-1 max-w-screen-2xl h-[598px] pt-[60px] pb-[60px] pl-[80px] pr-[80px] gap-[29px]">
         <div className="flex justify-center items-center">
-          <div className="grid grid-cols-2 items-center gap-[16px]  ">
-            <div className="w-[630px] h-[478px] bg-[#2A254B] items-center flex flex-col justify-center">
-              <div className="w-[495px] h-[99px] gap-3 text-[#FFFFFF] flex flex-col justify-center">
+          <div className="grid grid-cols-2 gap-[25px]  items-start">
+            {/* Column 1 */}
+            <div className="w-full h-full bg-[#2A254B] flex flex-col justify-center items-center gap-[200px]">
+              <div className="w-[80%] h-[99px] text-[#FFFFFF] flex flex-col gap-3 justify-center">
                 <h1 className="text-[32px] font-normal leading-[39.36px]">
-                  {" "}
                   It started with a small idea
                 </h1>
                 <p className="text-[18px] font-normal leading-[24.3px]">
-                  A global brand with local beginnings, our story begain in a
+                  A global brand with local beginnings, our story began in a
                   small studio in South London in early 2014
                 </p>
               </div>
-              <button 
-                  onClick={() => router.push('./product')}
-              className="cursor-pointer hover:scale-[1.05] mt-[180px] mb-[30px] mr-[310px] text-[white]  gap-[10px]  bg-[#F9F9F926] h-[56px] w-[#F9F9F9] pt-[16px] pb-[16px] pr-[32px] pl-[32px] font-normal text-[16px] leading-[24px] text-center">
+              <button
+                onClick={() => router.push("./product")}
+                className="cursor-pointer hover:scale-[1.05] mr-auto ml-[69px] text-white bg-[#F9F9F926] h-[56px] w-[180px] pt-[16px] pb-[16px] px-[32px] font-normal text-[16px] leading-[24px] text-center"
+              >
                 View collection
               </button>
             </div>
-            <Image
-              src="/images/Image Block.svg"
-              alt="Hero Image"
-              width={630}
-              height={478}
-            />
+            {/* Column 2 */}
+            <div className="w-full h-full flex items-center justify-center">
+              <Image
+                src="/images/Image Block.svg"
+                alt="Hero Image"
+                width={630}
+                height={478}
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div className="grid grid-rows-1 w-[1440px] h-[444px]">
+
+      <div className="pt-9 grid grid-rows-1 max-w-screen-2xl h-[444px]">
         <Image
           src="/images/Image.svg"
           alt="Hero Image"
@@ -220,6 +238,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

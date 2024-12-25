@@ -1,8 +1,8 @@
 import Image from "next/image";
 export default function Footer() {
     return (
-      <div className="h-[380px] w-[1440px]">
-        <div className="bg-[#2A254B] grid lg:grid-rows-4 lg:grid-cols-5 h-[380px] w-full max-w-[1440px]">
+      <div className="h-[380px] max-w-screen-2xl">
+        <div className="bg-[#2A254B] grid lg:grid-rows-4 lg:grid-cols-5 h-[380px] w-full max-w-screen-2xl">
           <div className="row-span-3 col-span-5  flex justify-around items-start">
             <div className=" flex-col justify-center items-center space-y-3 w-[130px] h-[174px] mt-[58px]">
               <div className="font-normal text-[16px] leading-[19.6px] text-white">Menu</div>
@@ -98,5 +98,97 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+            /* <footer className="flex flex-col  justify-center max-w-2xl items-center">
+        <div className="grid grid-rows-5 h-[668px] max-w-2xl items-center bg-[#2A254B]">
+          <div className="row-span-2 flex w-full  justify-center mx-auto">
+            <div className="w-[50%] pl-[40px] flex-col justify-center items-center space-y-3 h-[206px]  mt-[58px]">
+              <div className="font-normal text-[16px] leading-[19.6px] text-white">
+                Categories
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Crockery
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Furniture
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Homeware
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Plant pots
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Chairs
+              </div>
+            </div>
+            <div className="w-[50%] flex-col justify-center items-center space-y-3  h-[174px] mt-[58px]">
+              <div className="font-normal text-[16px] leading-[19.6px] text-white">
+                Menu
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                New arrivals
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Best sellers
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Recently viewed
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Popular this week
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                All products
+              </div>
+            </div>
+          </div>
+
+          <div className="row-span-2 w-full flex items-center pl-10">
+            <div className="flex-col justify-center items-center space-y-3 h-[174px] w-[110px] mt-[58px]">
+              <div className="font-normal text-[16px] leading-[19.6px] text-white">
+                Our company
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                About us
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Vacancies
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Contact us
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Privacy
+              </div>
+              <div className="font-normal text-[14px] leading-[18.9px] text-white">
+                Returns policy
+              </div>
+            </div>
+          </div>
+
+          <div className="row-span-1 p-7 max-w-2xl flex  flex-col justify-center items-center">
+            <div className=" pt-[58px] space-y-3 text-white">
+              <p className=" font-normal text-[16px] leading-[19.6px]">
+                Join our mailing list
+              </p>
+              <div className="flex h-[56px] w-full ">
+                <input
+                  type="text"
+                  placeholder="your@email.com"
+                  className="flex-grow  h-[56px] bg-[#FFFFFF26] items-center pl-[36px] font-normal text-[16px] leading-[21.6px]"
+                />
+                <button className="text-[#2A254B] pt-[16px] gap-[10px] flex justify-center items-center bg-white h-[56px] w-full pb-[16px] pr-[32px] pl-[32px] font-normal text-[16px] leading-[24px]">
+                  Sign up
+                </button>
+              </div>
+            </div>
+            <div className="w-full text-center font-normal text-[14px] leading-[18.9px]">
+              Copyright 2022 Avion LTD
+            </div>
+          </div>
+        </div>
+      </footer> */
     );
+
   }

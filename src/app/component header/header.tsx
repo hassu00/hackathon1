@@ -7,10 +7,10 @@ export default function Header() {
   return (
     <div>
 
-    <div className=' gap-4 items-center lg:block  hidden'>
+    <div className=' gap-4 items-center lg:block h-[132px] hidden'>
         <div className='lg:block  hidden'>
 
-        <div className="w-[1440px] md:w-full h-[132px] grid grid-rows-2 ">
+        <div className="max-w-screen-2xl md:w-full h-[132px] grid grid-rows-2 ">
             <div className="flex justify-between items-center">
             <Image
             width={16}
@@ -50,8 +50,8 @@ export default function Header() {
     </div>
     </div>
             </div>
-    <header className='h-[69px] w-full mx-auto  grid grid-rows-1  '>
-      <div className='block lg:hidden'>
+     <header className='lg:hidden bg-white fixed top-0 left-0 w-full h-[69px] z-50'>
+      <div className="block lg:hidden ">
         <div className='flex justify-between items-center m-5 ' >
           <div className='font-normal text-[24px] leading-[29.52px]'>Avion</div>
           <div className='flex gap-5 '>
@@ -71,7 +71,7 @@ export default function Header() {
             
           />
           {OpenMenu &&(
-            <div className='absolute  top-12 z-10 items-center w-[100px] py-3  mr-[50px] bg-white'>
+            <div className='absolute  top-full  items-center w-[100px] shadow-lg py-4 bg-white'>
               <ul className='flex flex-col gap-5'>
                 <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Plant pots</li>
                 <li className='text-[14px] text-[#726E8D] cursor-pointer hover:underline'>Ceramics</li>
@@ -86,7 +86,7 @@ export default function Header() {
           </div>
         </div>
           </div>
-      </header>
+      </header> 
     </div>
   )
-}
+}  
